@@ -1,12 +1,11 @@
 ## Projeto de Banco de Dados
 
-Este repositório contém o projeto desenvolvido para a disciplina **Banco de Dados** (ARA0040/Turma 3001), sob a orientação do professor **Célio Roberto da Silva Ramos de Souza** na **Universidade Wydern – UniRuy**, turno noturno. O objetivo do trabalho é demonstrar os conhecimentos adquiridos em sala de aula por meio da criação de um banco de dados para um sistema de gestão de uma livraria/papelaria.
-
+Este repositório contém o projeto desenvolvido para a disciplina **Banco de Dados** (ARA0040/Turma 3001), sob a orientação do professor **Célio Roberto da Silva Ramos de Souza** na **Universidade Wydern – UniRuy**, turno noturno. O objetivo do trabalho é demonstrar os conhecimentos adquiridos em sala de aula por meio da criação de um banco de dados. 
 ### Objetivo do Projeto
 
 A aplicação desenvolvida atende às seguintes especificações:
 
-- Criação de, no mínimo, as seguintes tabelas: Controle de estoque de livros, Registro de vendas, Cadastro de clientes e Cadastro de fornecedores.
+- Criação de um sistema de gestão de uma livraria/papelaria.
 - Inclusão de uma cópia do banco de dados criado.
 - Apresentação do diagrama do banco de dados.
 - Prints mostrando o banco de dados no computador do aluno.

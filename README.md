@@ -1,2 +1,32 @@
-# projeto-de-banco-de-dados-wyden
-Este repositório contém o projeto desenvolvido para a disciplina Banco de Dados (ARA0040/Turma 3001), sob a orientação do professor Célio Roberto da Silva Ramos de Souza na Universidade Wydern – UniRuy, turno noturno.
+## Projeto de Banco de Dados
+
+Este repositório contém o projeto desenvolvido para a disciplina **Banco de Dados** (ARA0040/Turma 3001), sob a orientação do professor **Célio Roberto da Silva Ramos de Souza** na **Universidade Wydern – UniRuy**, turno noturno. O objetivo do trabalho é demonstrar os conhecimentos adquiridos em sala de aula por meio da criação de um banco de dados para um sistema de gestão de uma livraria/papelaria.
+
+### Objetivo do Projeto
+
+A aplicação desenvolvida atende às seguintes especificações:
+
+- Criação de, no mínimo, as seguintes tabelas: Controle de estoque de livros, Registro de vendas, Cadastro de clientes e Cadastro de fornecedores.
+- Inclusão de uma cópia do banco de dados criado.
+- Apresentação do diagrama do banco de dados.
+- Prints mostrando o banco de dados no computador do aluno.
+
+### Entrega do Trabalho
+
+O trabalho deverá ser entregue por meio de um repositório Git, cujo link deverá ser enviado ao professor via Microsoft Teams.
+
+### Ferramentas Utilizadas
+
+As ferramentas utilizadas para a realização deste projeto foram:
+
+- **Microsoft SQL Server**: Para o gerenciamento e desenvolvimento do banco de dados.
+- **MySQL Workbench**: Para a modelagem e gestão do banco de dados.
+
+### Integrantes do Grupo
+
+- **Dimitrius Khouri Mariano dos Santos** - [Repositório](https://github.com/DKMariano)
+- **João Vitor** - [Repositório](https://github.com/JoaoVictorCarvalho-DEV)
+- **Guilherme Miguel** - [Repositório]()
+- **Luiz Fernando** - [Repositório]()
+- **Nailma** - [Repositório]()
+

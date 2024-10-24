@@ -25,7 +25,7 @@ As ferramentas utilizadas para a realização deste projeto foram:
 
 - **Dimitrius Khouri Mariano dos Santos** - [Repositório](https://github.com/DKMariano)
 - **João Vitor** - [Repositório](https://github.com/JoaoVictorCarvalho-DEV)
-- **Guilherme Miguel** - [Repositório]()
+- **Guilherme Miguel Neto Santa Rosa** - [Repositório](https://github.com/GuilhermeMiguel355)
 - **Luiz Fernando** - [Repositório]()
 - **Nailma** - [Repositório]()
 

@@ -1,0 +1,154 @@
+create database LIVRARIA_RUY;
+
+create table Clientes (
+ID_cliente tinyint NOT NULL,
+Nome varchar(30)NOT NULL,
+CPF tinyint NOT NULL,
+Email varchar (50),
+Telefone tinyint NOT NULL,
+Endereço varchar (50),
+Data_cadastro date
+constraint ID_CLIENTE primary key (ID_cliente)
+
+);
+
+sp_help Clientes;
+
+create table Funcionários (
+ ID_funcionario tinyint primary key NOT NULL,
+ Nome varchar(30)NOT NULL,
+ CPF tinyint NOT NULL,
+ Cargo varchar(30)NOT NULL,
+ Salario tinyint NOT NULL,
+Data_admissao date NOT NULL,
+Data_demissao date NOT NULL
+
+);
+
+create table Fornecedores (
+
+ID_fornecedor tinyint primary key NOT NULL,
+Nome_fornecedor varchar(30)NOT NULL,
+CNPJ tinyint NOT NULL,
+Telefone tinyint NOT NULL,
+Email tinyint NOT NULL,
+Endereco varchar(30)NOT NULL,
+
+);
+
+create table Categorias (
+
+ID_categoria tinyint primary key NOT NULL,
+Nome_categoria varchar(30)NOT NULL,
+Descricao varchar NOT NULL
+
+);
+
+create table Editora (
+
+Nome_editora varchar (50) NOT NULL, 
+ID_editora smallint primary key NOT NULL identity
+
+);
+
+create table Produtos (
+
+ID_produto tinyint primary key NOT NULL identity (100,1),
+Nome_produto varchar (70) NOT NULL,
+Descricao varchar NOT NULL,
+ISBN13 char(13) UNIQUE,
+Data_publicacao date,
+Preço money NOT NULL,
+Numero_paginas smallint,
+Qtd_estoque tinyint NOT NULL,
+ID_editora smallint NOT NULL,
+ID_categoria tinyint NOT NULL,
+ID_fornecedor tinyint NOT NULL,
+
+CONSTRAINT chave_editora foreign key (ID_editora)
+	REFERENCES Editora(ID_editora) ON DELETE CASCADE,
+CONSTRAINT chave_categoria foreign key (ID_categoria)
+	REFERENCES Categorias(ID_categoria) ON DELETE CASCADE,
+CONSTRAINT chave_fornecedor foreign key (ID_fornecedor) 
+	REFERENCES Fornecedores(ID_fornecedor) ON DELETE CASCADE,
+
+CONSTRAINT verifica_preco check (Preço >= 0)
+);
+
+create table Pedidos (
+
+ID_pedido smallint unique identity (9000,1) NOT NULL,
+ID_item smallint unique NOT NULL,
+Data_pedido date NOT NULL,
+Valor_pedido money NOT NULL,
+ID_cliente tinyint,
+
+CONSTRAINT chave_cliente foreign key (ID_cliente)
+	REFERENCES Clientes(ID_cliente) ON DELETE CASCADE,
+
+);
+
+create table Itens_Pedido (
+ID_item smallint primary key NOT NULL,
+ID_pedido smallint NOT NULL,
+ID_produto tinyint NOT NULL,
+Qtd_itens smallint NOT NULL,
+Preço_unitario money NOT NULL,
+Subtotal money NOT NULL, 
+
+CONSTRAINT chave_pedido foreign key (ID_pedido)
+	REFERENCES Pedidos(ID_pedido) ON DELETE CASCADE,
+CONSTRAINT chave_produto foreign key (ID_produto)
+	REFERENCES Produtos(ID_produto) ON DELETE CASCADE,
+
+);
+
+create table Pagamentos (
+
+ID_pagamento smallint primary key NOT NULL,
+ID_pedido smallint NOT NULL,
+Metodo_pagamento varchar (20) NOT NULL,
+Valor_Pago money NOT NULL,
+Data_pagamento date NOT NULL,
+
+CONSTRAINT chave_pedido_pay foreign key (ID_pedido)
+	REFERENCES Pedidos(ID_pedido) ON DELETE CASCADE,
+
+);
+
+create table Estoque (
+
+ID_estoque smallint NOT NULL,
+ID_produto tinyint NOT NULL,
+Qtd_atual tinyint NOT NULL,
+Data_atualização date NOT NULL,
+
+CONSTRAINT chave_produto_estoque foreign key (ID_produto)
+	REFERENCES Produtos(ID_produto) ON DELETE CASCADE,
+
+);
+
+create table Compras (
+
+ID_compra smallint primary key NOT NULL,
+ID_fornecedor tinyint,
+Data_compra date NOT NULL,
+Valor_total money NOT NULL,
+
+CONSTRAINT chave_fornecedor_compras foreign key (ID_fornecedor)
+	REFERENCES Fornecedores(ID_fornecedor) ON DELETE CASCADE,
+
+);
+
+create table Itens_Compras (
+
+ID_item_compra smallint primary key NOT NULL,
+ID_compra smallint,
+ID_produto smallint,
+Qtd_itens_compra smallint NOT NULL,
+Preço_unitário money NOT NULL,
+
+CONSTRAINT chave_intens_compra foreign key (ID_compra)
+	REFERENCES Compras(ID_compra) ON DELETE CASCADE,
+
+);

@@ -24,8 +24,8 @@ As ferramentas utilizadas para a realização deste projeto foram:
 ### Integrantes do Grupo
 
 - **Dimitrius Khouri Mariano dos Santos** - [Repositório](https://github.com/DKMariano)
-- **João Vitor** - [Repositório](https://github.com/JoaoVictorCarvalho-DEV)
+- **João Víctor Miranda Carvalho** - [Repositório](https://github.com/JoaoVictorCarvalho-DEV)
 - **Guilherme Miguel Neto Santa Rosa** - [Repositório](https://github.com/GuilhermeMiguel355)
-- **Luiz Fernando** - [Repositório]()
-- **Nailma** - [Repositório]()
+- **Luiz Fernando Ferreira Barbosa** - [Repositório](https://github.com/oLuizBarbosa)
+- **Nailma Santos da Silva** - [Repositório]()
 
